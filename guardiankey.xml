@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="authentication" method="upgrade">
+	<name>Authentication - GuardianKey</name>
+	<author>GuardianKey</author>
+	<creationDate>January 2019</creationDate>
+	<copyright>Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>plugins@guardiankey.io</authorEmail>
+	<authorUrl>https://guardiankey.io</authorUrl>
+	<version>1.0.0</version>
+	<description>GuardianKey plugin for Joomla!</description>
+	<files>
+		<filename plugin="guardiankey">guardiankey.php</filename>
+		<filename>guardiankey.xml</filename>
+	    <filename>guardiankey.class.php</filename>
+		<filename>postinstall/actions.php</filename>
+	    <scriptfile>script.php</scriptfile>
+
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="gk_registration_email"
+					type="text"
+					label="Registration email"
+					description="E-mail of registration"
+					size="20"
+				/>
+				<field
+					name="gk_agentId"
+					type="text"
+					label="AgentID"
+					description="AgentID"
+					size="20"
+				/>
+				<field
+					name="gk_key"
+					type="text"
+					label="Key"
+					description="Key"
+					size="20"
+				/>
+					<field
+					name="gk_iv"
+					type="text"
+					label="IV"
+					description="IV"
+					size="20"
+				/>
+				<field
+					name="gk_orgId"
+					type="text"
+					label="OrganizationID"
+					description="OrganizationID"
+					size="20"
+				/>
+				<field
+					name="gk_groupId"
+					type="text"
+					label="AuthGroupID"
+					description="AuthGroupID"
+					size="20"
+				/>
+				<field
+					name="gk_service"
+					type="text"
+					label="Service name"
+					description="Service name"
+					size="20"
+				/>
+			
+
+				<field
+					name="gk_reverse"
+					type="radio"
+					label="Resolve DNS"
+					description="Resolve hostname of IPs"
+					default="0"
+					class="btn-group btn-group-yesno"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			<field
+					name="gk_notify_users"
+					type="radio"
+					label="Notify users"
+					description="Notify users"
+					default="0"
+					class="btn-group btn-group-yesno"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				
+				<field
+					name="gk_subject_mail"
+					type="text"
+					label="Subject of e-mail"
+					description="Subject of notification e-mail"
+					size="20"
+				/>
+				<field
+					name="gk_text_mail"
+					type="textarea"
+					label="Body of email"
+					description="Body of notification e-mail"
+					size="20"
+					rows="10"
+					cols="5"
+				/>
+
+			
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
